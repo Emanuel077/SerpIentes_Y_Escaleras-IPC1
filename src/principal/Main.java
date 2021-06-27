@@ -8,6 +8,8 @@ public class Main {
    
     public static void main(String[] args) {
        Inicio portada = new Inicio();
+       portada.setVisible(true);
+       
     }
     
 }

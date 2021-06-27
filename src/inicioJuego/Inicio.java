@@ -10,7 +10,8 @@ public class Inicio extends javax.swing.JFrame {
     
     public Inicio(){
         initComponents();
-        this.setLocationRelativeTo(null);
+        this.setLocationRelativeTo(Inicio.this);
+        
     }
 
     
@@ -19,7 +20,7 @@ public class Inicio extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
+        jButton1IrMenu = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
@@ -27,22 +28,23 @@ public class Inicio extends javax.swing.JFrame {
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton1.setBackground(new java.awt.Color(255, 255, 255));
-        jButton1.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(0, 0, 0));
-        jButton1.setText("Ir a Menu");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        jButton1IrMenu.setBackground(new java.awt.Color(0, 0, 0));
+        jButton1IrMenu.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jButton1IrMenu.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1IrMenu.setText("Ir a Menu");
+        jButton1IrMenu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                jButton1IrMenuActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 370, 110, 40));
+        getContentPane().add(jButton1IrMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 380, 140, 40));
 
         jLabel3.setBackground(new java.awt.Color(0, 0, 0));
         jLabel3.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("                                      SNAKES AND LADDERS");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 590, 60));
+        jLabel3.setOpaque(true);
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 630, 40));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Fondo 3.jpg"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -52,9 +54,11 @@ public class Inicio extends javax.swing.JFrame {
 
     
     // Programacion del boton
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void jButton1IrMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1IrMenuActionPerformed
+        Menu menu = new Menu ();
+        menu.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jButton1IrMenuActionPerformed
 
     
     public static void main(String args[]) {
@@ -92,7 +96,7 @@ public class Inicio extends javax.swing.JFrame {
     
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton1IrMenu;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
     // End of variables declaration//GEN-END:variables

@@ -1,4 +1,3 @@
 *.class
 ./build
-maifest.mf
-nbproject
+manifest
