@@ -33,6 +33,7 @@ public class Menu extends javax.swing.JFrame {
         jButton1Jugar = new javax.swing.JButton();
         jButton2Estadistica = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        btn_Salir = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -47,7 +48,7 @@ public class Menu extends javax.swing.JFrame {
                 jButton1AgregarJugadorActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1AgregarJugador, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 130, -1, -1));
+        getContentPane().add(jButton1AgregarJugador, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 80, -1, -1));
 
         jButton2mostrarJugador.setBackground(new java.awt.Color(0, 0, 0));
         jButton2mostrarJugador.setFont(new java.awt.Font("Courier New", 1, 18)); // NOI18N
@@ -58,7 +59,7 @@ public class Menu extends javax.swing.JFrame {
                 jButton2mostrarJugadorActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton2mostrarJugador, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 200, 200, 40));
+        getContentPane().add(jButton2mostrarJugador, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 160, 200, 40));
 
         jButton1Jugar.setBackground(new java.awt.Color(0, 0, 0));
         jButton1Jugar.setFont(new java.awt.Font("Courier New", 1, 18)); // NOI18N
@@ -69,7 +70,7 @@ public class Menu extends javax.swing.JFrame {
                 jButton1JugarActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1Jugar, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 270, 200, -1));
+        getContentPane().add(jButton1Jugar, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 240, 200, 40));
 
         jButton2Estadistica.setBackground(new java.awt.Color(0, 0, 0));
         jButton2Estadistica.setFont(new java.awt.Font("Courier New", 1, 18)); // NOI18N
@@ -80,7 +81,7 @@ public class Menu extends javax.swing.JFrame {
                 jButton2EstadisticaActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton2Estadistica, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 340, 200, -1));
+        getContentPane().add(jButton2Estadistica, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 310, 200, 40));
 
         jLabel1.setBackground(new java.awt.Color(0, 0, 0));
         jLabel1.setFont(new java.awt.Font("Goudy Old Style", 1, 24)); // NOI18N
@@ -88,6 +89,17 @@ public class Menu extends javax.swing.JFrame {
         jLabel1.setText("      BIENVENIDO AL MENU PRINCIPAL");
         jLabel1.setOpaque(true);
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 490, 40));
+
+        btn_Salir.setBackground(new java.awt.Color(0, 0, 0));
+        btn_Salir.setFont(new java.awt.Font("Courier New", 1, 18)); // NOI18N
+        btn_Salir.setForeground(new java.awt.Color(255, 255, 255));
+        btn_Salir.setText("Salir");
+        btn_Salir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_SalirActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btn_Salir, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 420, 150, 40));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Fondo2.jpg"))); // NOI18N
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 487, 460));
@@ -118,6 +130,10 @@ public class Menu extends javax.swing.JFrame {
         jugar.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton1JugarActionPerformed
+
+    private void btn_SalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_SalirActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_SalirActionPerformed
 
     
     public static void main(String args[]) {
@@ -153,6 +169,7 @@ public class Menu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btn_Salir;
     private javax.swing.JButton jButton1AgregarJugador;
     private javax.swing.JButton jButton1Jugar;
     private javax.swing.JButton jButton2Estadistica;

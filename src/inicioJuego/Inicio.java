@@ -1,6 +1,7 @@
 
 package inicioJuego;
-
+import java.awt.Image;
+import java.awt.Toolkit;
 /**
  *
  * @author Usuario
@@ -13,6 +14,12 @@ public class Inicio extends javax.swing.JFrame {
         this.setLocationRelativeTo(Inicio.this);
         
     }
+    
+    public Image getIconImage(){
+        Image retValue = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("Imagenes/Icono.png"));
+        return retValue;
+    }
+    
 
     
      
@@ -25,6 +32,7 @@ public class Inicio extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setIconImage(getIconImage());
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -40,9 +48,9 @@ public class Inicio extends javax.swing.JFrame {
         getContentPane().add(jButton1IrMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 380, 140, 40));
 
         jLabel3.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel3.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 18)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Courier New", 3, 24)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("                                      SNAKES AND LADDERS");
+        jLabel3.setText("             SNAKES AND LADDERS");
         jLabel3.setOpaque(true);
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 630, 40));
 

@@ -1,22 +1,21 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package inicioJuego;
 
-/**
- *
- * @author Usuario
- */
+package inicioJuego;
+import Usuario.Persona;
+
+import java.util.ArrayList;
+import javax.swing.JOptionPane;
+
+
 public class AgregarJugador extends javax.swing.JFrame {
 
-    /**
-     * Creates new form AgregarJugador
-     */
+    
+    private ArrayList<Persona> Lis;
+    
     public AgregarJugador() {
+        Lis = new ArrayList <Persona>();
         initComponents();
           this.setLocationRelativeTo(null);
+          
     }
 
     /**
@@ -28,25 +27,163 @@ public class AgregarJugador extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        Regresar_menu1 = new javax.swing.JButton();
+        lbl_Id = new javax.swing.JLabel();
+        TxtId = new javax.swing.JTextField();
+        lbl_Nombre = new javax.swing.JLabel();
+        TxtNombre = new javax.swing.JTextField();
+        lbl_Apellido = new javax.swing.JLabel();
+        TxtApellido = new javax.swing.JTextField();
+        btn_Agregar = new javax.swing.JButton();
+        btn_Modificar = new javax.swing.JButton();
+        btn_Eliminar = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        JTable = new javax.swing.JTable();
+        Fondo = new javax.swing.JLabel();
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
+        Regresar_menu1.setText("<< Regrear ");
+        Regresar_menu1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Regresar_menu1ActionPerformed(evt);
+            }
+        });
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        lbl_Id.setBackground(new java.awt.Color(0, 0, 0));
+        lbl_Id.setFont(new java.awt.Font("Courier New", 1, 18)); // NOI18N
+        lbl_Id.setForeground(new java.awt.Color(255, 255, 255));
+        lbl_Id.setText("  ID ");
+        lbl_Id.setOpaque(true);
+        getContentPane().add(lbl_Id, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 70, 60, 30));
+
+        TxtId.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TxtIdActionPerformed(evt);
+            }
+        });
+        getContentPane().add(TxtId, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 120, 180, 30));
+
+        lbl_Nombre.setText("Nombre");
+        getContentPane().add(lbl_Nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 170, 60, 40));
+        getContentPane().add(TxtNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 210, 180, 30));
+
+        lbl_Apellido.setText("Apellido");
+        getContentPane().add(lbl_Apellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 260, 60, 30));
+
+        TxtApellido.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TxtApellidoActionPerformed(evt);
+            }
+        });
+        getContentPane().add(TxtApellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 310, 200, 30));
+
+        btn_Agregar.setText("Agregar");
+        btn_Agregar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_AgregarActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btn_Agregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 50, -1, -1));
+
+        btn_Modificar.setText("Modiicar");
+        btn_Modificar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_ModificarActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btn_Modificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 120, 80, -1));
+
+        btn_Eliminar.setText("Eliminar");
+        getContentPane().add(btn_Eliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 200, -1, -1));
+
+        JTable.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null}
+            },
+            new String [] {
+                "Id", "Nombre", "Apellido"
+            }
+        ));
+        jScrollPane1.setViewportView(JTable);
+
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 390, 400, 100));
+
+        Fondo.setBackground(new java.awt.Color(255, 51, 51));
+        Fondo.setOpaque(true);
+        getContentPane().add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 420, 550));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    /**
-     * @param args the command line arguments
-     */
+    private void Regresar_menu1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Regresar_menu1ActionPerformed
+         Menu regresar1 = new Menu();
+         regresar1.setVisible(true);
+         this.dispose();
+    }//GEN-LAST:event_Regresar_menu1ActionPerformed
+
+    private void TxtIdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TxtIdActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TxtIdActionPerformed
+
+    private void TxtApellidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TxtApellidoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TxtApellidoActionPerformed
+
+    private void btn_ModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_ModificarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_ModificarActionPerformed
+    
+    
+    private void limpiar (){
+        TxtId.setText("");
+        TxtNombre.setText("");
+        TxtApellido.setText("");
+    }
+    
+    
+    private void btn_AgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_AgregarActionPerformed
+        String nombre, apellido;
+        int id;
+        
+        
+        try {
+            nombre = TxtNombre.getText();
+            apellido= TxtApellido.getText();
+            id = Integer.parseInt(TxtId.getText());
+            Lis.add(new Persona ( id, nombre, apellido));
+        } catch (Exception e) {
+            
+            JOptionPane.showConfirmDialog(null, " Error!!.. Verifique los Datos");
+            
+        }
+              limpiar();
+              verDatos();
+        
+    }//GEN-LAST:event_btn_AgregarActionPerformed
+        
+    private void verDatos (){
+        String guardarLista [][] = new String [Lis.size()][3];
+        Persona aux;
+        for ( int i = 0; i< Lis.size(); i++){
+            aux = Lis.get(i);
+            guardarLista[i][0] = Integer.toString(aux.getId());
+            guardarLista[i][1] = aux.getNombre();
+            guardarLista[i][2] = aux.getApellido();
+        }
+        
+        JTable.setModel(new javax.swing.table.DefaultTableModel(
+           guardarLista,
+            new String [] {
+                "Id", "Nombre", "Apellido"
+            }
+        ));
+    }
+    
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -80,5 +217,18 @@ public class AgregarJugador extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Fondo;
+    private javax.swing.JTable JTable;
+    private javax.swing.JButton Regresar_menu1;
+    private javax.swing.JTextField TxtApellido;
+    private javax.swing.JTextField TxtId;
+    private javax.swing.JTextField TxtNombre;
+    private javax.swing.JButton btn_Agregar;
+    private javax.swing.JButton btn_Eliminar;
+    private javax.swing.JButton btn_Modificar;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel lbl_Apellido;
+    private javax.swing.JLabel lbl_Id;
+    private javax.swing.JLabel lbl_Nombre;
     // End of variables declaration//GEN-END:variables
 }
