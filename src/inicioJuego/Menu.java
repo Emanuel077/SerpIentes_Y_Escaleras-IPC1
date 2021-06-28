@@ -4,6 +4,10 @@
  * and open the template in the editor.
  */
 package inicioJuego;
+import tablero.Tablero;
+import inicioJuego.AgregarJugador;
+
+
 
 /**
  *
@@ -29,9 +33,8 @@ public class Menu extends javax.swing.JFrame {
     private void initComponents() {
 
         jButton1AgregarJugador = new javax.swing.JButton();
-        jButton2mostrarJugador = new javax.swing.JButton();
         jButton1Jugar = new javax.swing.JButton();
-        jButton2Estadistica = new javax.swing.JButton();
+        jButton2Reportes = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         btn_Salir = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
@@ -39,49 +42,38 @@ public class Menu extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton1AgregarJugador.setBackground(new java.awt.Color(0, 0, 0));
+        jButton1AgregarJugador.setBackground(new java.awt.Color(255, 255, 255));
         jButton1AgregarJugador.setFont(new java.awt.Font("Courier New", 1, 18)); // NOI18N
-        jButton1AgregarJugador.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1AgregarJugador.setForeground(new java.awt.Color(0, 0, 0));
         jButton1AgregarJugador.setText("Agregar Jugador");
         jButton1AgregarJugador.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1AgregarJugadorActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1AgregarJugador, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 80, -1, -1));
+        getContentPane().add(jButton1AgregarJugador, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, -1, -1));
 
-        jButton2mostrarJugador.setBackground(new java.awt.Color(0, 0, 0));
-        jButton2mostrarJugador.setFont(new java.awt.Font("Courier New", 1, 18)); // NOI18N
-        jButton2mostrarJugador.setForeground(new java.awt.Color(255, 255, 255));
-        jButton2mostrarJugador.setText("Mostrar Jugador");
-        jButton2mostrarJugador.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2mostrarJugadorActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton2mostrarJugador, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 160, 200, 40));
-
-        jButton1Jugar.setBackground(new java.awt.Color(0, 0, 0));
+        jButton1Jugar.setBackground(new java.awt.Color(255, 255, 255));
         jButton1Jugar.setFont(new java.awt.Font("Courier New", 1, 18)); // NOI18N
-        jButton1Jugar.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1Jugar.setForeground(new java.awt.Color(0, 0, 0));
         jButton1Jugar.setText("Jugar ");
         jButton1Jugar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1JugarActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1Jugar, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 240, 200, 40));
+        getContentPane().add(jButton1Jugar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, 200, 40));
 
-        jButton2Estadistica.setBackground(new java.awt.Color(0, 0, 0));
-        jButton2Estadistica.setFont(new java.awt.Font("Courier New", 1, 18)); // NOI18N
-        jButton2Estadistica.setForeground(new java.awt.Color(255, 255, 255));
-        jButton2Estadistica.setText("Estadistica");
-        jButton2Estadistica.addActionListener(new java.awt.event.ActionListener() {
+        jButton2Reportes.setBackground(new java.awt.Color(255, 255, 255));
+        jButton2Reportes.setFont(new java.awt.Font("Courier New", 1, 18)); // NOI18N
+        jButton2Reportes.setForeground(new java.awt.Color(0, 0, 0));
+        jButton2Reportes.setText("Reportes");
+        jButton2Reportes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2EstadisticaActionPerformed(evt);
+                jButton2ReportesActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton2Estadistica, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 310, 200, 40));
+        getContentPane().add(jButton2Reportes, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, 200, 40));
 
         jLabel1.setBackground(new java.awt.Color(0, 0, 0));
         jLabel1.setFont(new java.awt.Font("Goudy Old Style", 1, 24)); // NOI18N
@@ -90,19 +82,19 @@ public class Menu extends javax.swing.JFrame {
         jLabel1.setOpaque(true);
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 490, 40));
 
-        btn_Salir.setBackground(new java.awt.Color(0, 0, 0));
+        btn_Salir.setBackground(new java.awt.Color(255, 255, 255));
         btn_Salir.setFont(new java.awt.Font("Courier New", 1, 18)); // NOI18N
-        btn_Salir.setForeground(new java.awt.Color(255, 255, 255));
+        btn_Salir.setForeground(new java.awt.Color(0, 0, 0));
         btn_Salir.setText("Salir");
         btn_Salir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_SalirActionPerformed(evt);
             }
         });
-        getContentPane().add(btn_Salir, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 420, 150, 40));
+        getContentPane().add(btn_Salir, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 360, 190, 40));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Fondo2.jpg"))); // NOI18N
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 487, 460));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/F3.png"))); // NOI18N
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 480, 460));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -113,22 +105,19 @@ public class Menu extends javax.swing.JFrame {
          this.dispose();
     }//GEN-LAST:event_jButton1AgregarJugadorActionPerformed
 
-    private void jButton2EstadisticaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2EstadisticaActionPerformed
-        Estadistica estadistica = new Estadistica();
-        estadistica.setVisible(true);
-        this.dispose();
-    }//GEN-LAST:event_jButton2EstadisticaActionPerformed
-
-    private void jButton2mostrarJugadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2mostrarJugadorActionPerformed
-        MostrarJugador mostrar = new MostrarJugador ();
-        mostrar.setVisible(true);
-        this.dispose();
-    }//GEN-LAST:event_jButton2mostrarJugadorActionPerformed
+    private void jButton2ReportesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ReportesActionPerformed
+            
+        btn_AgregarActionPerformed ();
+        Reportes reporte = new Reportes();
+        reporte.setVisible(true);
+        this.dispose();    
+    }//GEN-LAST:event_jButton2ReportesActionPerformed
 
     private void jButton1JugarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1JugarActionPerformed
-        Jugar jugar = new Jugar();
-        jugar.setVisible(true);
-        this.dispose();
+
+        //Tablero jugar = new Tablero();
+        
+     
     }//GEN-LAST:event_jButton1JugarActionPerformed
 
     private void btn_SalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_SalirActionPerformed
@@ -172,9 +161,14 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JButton btn_Salir;
     private javax.swing.JButton jButton1AgregarJugador;
     private javax.swing.JButton jButton1Jugar;
-    private javax.swing.JButton jButton2Estadistica;
-    private javax.swing.JButton jButton2mostrarJugador;
+    private javax.swing.JButton jButton2Reportes;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables
+
+    private void btn_AgregarActionPerformed() {
+        btn_AgregarActionPerformed ();
+    }
+
+   
 }

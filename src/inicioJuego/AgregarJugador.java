@@ -235,7 +235,7 @@ public class AgregarJugador extends javax.swing.JFrame {
                 file.createNewFile();
             } catch (Exception e) {  
             }
-   
+            
         }
         
         // Guardar file
