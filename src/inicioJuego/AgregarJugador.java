@@ -36,7 +36,7 @@ public class AgregarJugador extends javax.swing.JFrame {
         TxtApellido = new javax.swing.JTextField();
         btn_Agregar = new javax.swing.JButton();
         btn_Modificar = new javax.swing.JButton();
-        btn_Eliminar = new javax.swing.JButton();
+        BtnEliminar = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         JTable = new javax.swing.JTable();
         Fondo = new javax.swing.JLabel();
@@ -56,28 +56,28 @@ public class AgregarJugador extends javax.swing.JFrame {
         lbl_Id.setForeground(new java.awt.Color(255, 255, 255));
         lbl_Id.setText("  ID ");
         lbl_Id.setOpaque(true);
-        getContentPane().add(lbl_Id, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 70, 60, 30));
+        getContentPane().add(lbl_Id, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 90, 60, 30));
 
         TxtId.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 TxtIdActionPerformed(evt);
             }
         });
-        getContentPane().add(TxtId, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 120, 180, 30));
+        getContentPane().add(TxtId, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 130, 180, 30));
 
         lbl_Nombre.setText("Nombre");
-        getContentPane().add(lbl_Nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 170, 60, 40));
-        getContentPane().add(TxtNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 210, 180, 30));
+        getContentPane().add(lbl_Nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 170, 60, 40));
+        getContentPane().add(TxtNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 210, 180, 30));
 
         lbl_Apellido.setText("Apellido");
-        getContentPane().add(lbl_Apellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 260, 60, 30));
+        getContentPane().add(lbl_Apellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 260, 60, 30));
 
         TxtApellido.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 TxtApellidoActionPerformed(evt);
             }
         });
-        getContentPane().add(TxtApellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 310, 200, 30));
+        getContentPane().add(TxtApellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 300, 200, 30));
 
         btn_Agregar.setText("Agregar");
         btn_Agregar.addActionListener(new java.awt.event.ActionListener() {
@@ -95,8 +95,13 @@ public class AgregarJugador extends javax.swing.JFrame {
         });
         getContentPane().add(btn_Modificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 120, 80, -1));
 
-        btn_Eliminar.setText("Eliminar");
-        getContentPane().add(btn_Eliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 200, -1, -1));
+        BtnEliminar.setText("Eliminar");
+        BtnEliminar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnEliminarActionPerformed(evt);
+            }
+        });
+        getContentPane().add(BtnEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 200, -1, -1));
 
         JTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -165,6 +170,20 @@ public class AgregarJugador extends javax.swing.JFrame {
               verDatos();
         
     }//GEN-LAST:event_btn_AgregarActionPerformed
+
+    private void BtnEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnEliminarActionPerformed
+        int clear;
+        try {
+             clear = JTable.getSelectedRow();
+             Lis.remove(clear);
+        } catch (Exception e) {
+            
+            JOptionPane.showMessageDialog(null, "ERROR! Seleccione una fila que desee Eliminar");
+            
+        }
+        
+        verDatos();
+    }//GEN-LAST:event_BtnEliminarActionPerformed
         
     private void verDatos (){
         String guardarLista [][] = new String [Lis.size()][3];
@@ -217,6 +236,7 @@ public class AgregarJugador extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton BtnEliminar;
     private javax.swing.JLabel Fondo;
     private javax.swing.JTable JTable;
     private javax.swing.JButton Regresar_menu1;
@@ -224,7 +244,6 @@ public class AgregarJugador extends javax.swing.JFrame {
     private javax.swing.JTextField TxtId;
     private javax.swing.JTextField TxtNombre;
     private javax.swing.JButton btn_Agregar;
-    private javax.swing.JButton btn_Eliminar;
     private javax.swing.JButton btn_Modificar;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lbl_Apellido;
