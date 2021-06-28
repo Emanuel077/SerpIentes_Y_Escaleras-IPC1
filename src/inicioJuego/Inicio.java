@@ -37,7 +37,7 @@ public class Inicio extends javax.swing.JFrame {
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jButton1IrMenu.setBackground(new java.awt.Color(0, 0, 0));
-        jButton1IrMenu.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jButton1IrMenu.setFont(new java.awt.Font("Courier New", 1, 18)); // NOI18N
         jButton1IrMenu.setForeground(new java.awt.Color(255, 255, 255));
         jButton1IrMenu.setText("Ir a Menu");
         jButton1IrMenu.addActionListener(new java.awt.event.ActionListener() {

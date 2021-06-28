@@ -1,6 +1,8 @@
 
 package inicioJuego;
 import Usuario.Persona;
+import java.io.File;
+import java.io.PrintWriter;
 
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
@@ -39,6 +41,8 @@ public class AgregarJugador extends javax.swing.JFrame {
         BtnEliminar = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         JTable = new javax.swing.JTable();
+        MensajeAgregar = new javax.swing.JLabel();
+        Regresar1 = new javax.swing.JButton();
         Fondo = new javax.swing.JLabel();
 
         Regresar_menu1.setText("<< Regrear ");
@@ -54,55 +58,71 @@ public class AgregarJugador extends javax.swing.JFrame {
         lbl_Id.setBackground(new java.awt.Color(0, 0, 0));
         lbl_Id.setFont(new java.awt.Font("Courier New", 1, 18)); // NOI18N
         lbl_Id.setForeground(new java.awt.Color(255, 255, 255));
-        lbl_Id.setText("  ID ");
-        lbl_Id.setOpaque(true);
-        getContentPane().add(lbl_Id, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 90, 60, 30));
+        lbl_Id.setText("Id");
+        getContentPane().add(lbl_Id, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 90, 60, 30));
 
         TxtId.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 TxtIdActionPerformed(evt);
             }
         });
-        getContentPane().add(TxtId, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 130, 180, 30));
+        getContentPane().add(TxtId, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, 200, 30));
 
+        lbl_Nombre.setFont(new java.awt.Font("Courier New", 1, 18)); // NOI18N
+        lbl_Nombre.setForeground(new java.awt.Color(255, 255, 255));
         lbl_Nombre.setText("Nombre");
-        getContentPane().add(lbl_Nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 170, 60, 40));
-        getContentPane().add(TxtNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 210, 180, 30));
+        getContentPane().add(lbl_Nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 170, 90, 40));
 
+        TxtNombre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TxtNombreActionPerformed(evt);
+            }
+        });
+        getContentPane().add(TxtNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, 200, 30));
+
+        lbl_Apellido.setFont(new java.awt.Font("Courier New", 1, 18)); // NOI18N
+        lbl_Apellido.setForeground(new java.awt.Color(255, 255, 255));
         lbl_Apellido.setText("Apellido");
-        getContentPane().add(lbl_Apellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 260, 60, 30));
+        getContentPane().add(lbl_Apellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 260, 110, 30));
 
         TxtApellido.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 TxtApellidoActionPerformed(evt);
             }
         });
-        getContentPane().add(TxtApellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 300, 200, 30));
+        getContentPane().add(TxtApellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 290, 200, 30));
 
+        btn_Agregar.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
+        btn_Agregar.setForeground(new java.awt.Color(0, 0, 0));
         btn_Agregar.setText("Agregar");
         btn_Agregar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_AgregarActionPerformed(evt);
             }
         });
-        getContentPane().add(btn_Agregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 50, -1, -1));
+        getContentPane().add(btn_Agregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 130, 100, 40));
 
+        btn_Modificar.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
+        btn_Modificar.setForeground(new java.awt.Color(0, 0, 0));
         btn_Modificar.setText("Modiicar");
         btn_Modificar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_ModificarActionPerformed(evt);
             }
         });
-        getContentPane().add(btn_Modificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 120, 80, -1));
+        getContentPane().add(btn_Modificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 200, 100, 40));
 
+        BtnEliminar.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
+        BtnEliminar.setForeground(new java.awt.Color(0, 0, 0));
         BtnEliminar.setText("Eliminar");
         BtnEliminar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BtnEliminarActionPerformed(evt);
             }
         });
-        getContentPane().add(BtnEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 200, -1, -1));
+        getContentPane().add(BtnEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 270, 100, -1));
 
+        JTable.setFont(new java.awt.Font("Courier New", 1, 12)); // NOI18N
         JTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
@@ -116,19 +136,35 @@ public class AgregarJugador extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(JTable);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 390, 400, 100));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 350, 510, 150));
 
-        Fondo.setBackground(new java.awt.Color(255, 51, 51));
+        MensajeAgregar.setBackground(new java.awt.Color(255, 255, 255));
+        MensajeAgregar.setFont(new java.awt.Font("Footlight MT Light", 1, 24)); // NOI18N
+        MensajeAgregar.setForeground(new java.awt.Color(255, 255, 255));
+        MensajeAgregar.setText("AGREGAR JUGADORES");
+        getContentPane().add(MensajeAgregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 0, 250, 40));
+
+        Regresar1.setBackground(new java.awt.Color(255, 255, 255));
+        Regresar1.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        Regresar1.setForeground(new java.awt.Color(0, 0, 0));
+        Regresar1.setText("Regresar");
+        Regresar1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Regresar1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(Regresar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(357, 532, 140, 40));
+
+        Fondo.setBackground(new java.awt.Color(51, 102, 255));
+        Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/F3.png"))); // NOI18N
         Fondo.setOpaque(true);
-        getContentPane().add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 420, 550));
+        getContentPane().add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 530, 600));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+   
     private void Regresar_menu1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Regresar_menu1ActionPerformed
-         Menu regresar1 = new Menu();
-         regresar1.setVisible(true);
-         this.dispose();
+        
     }//GEN-LAST:event_Regresar_menu1ActionPerformed
 
     private void TxtIdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TxtIdActionPerformed
@@ -184,7 +220,58 @@ public class AgregarJugador extends javax.swing.JFrame {
         
         verDatos();
     }//GEN-LAST:event_BtnEliminarActionPerformed
+
+    private void TxtNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TxtNombreActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TxtNombreActionPerformed
+
+    private void guardar (){
+        File file = new File("Jugadores.txt");
+        PrintWriter Escribe;
         
+        if (!file.exists()){
+            //Crear File
+            try {
+                file.createNewFile();
+            } catch (Exception e) {  
+            }
+   
+        }
+        
+        // Guardar file
+            try {
+                Persona aux1;
+                Escribe =  new PrintWriter(file, "utf-8");
+                
+                for (int i = 0; i < Lis.size(); i++) {
+                    aux1 = Lis.get(i);
+                    aux1.guardar(Escribe);
+                    
+                }
+                Escribe.close();
+            } catch (Exception e) {
+            }
+    }
+    
+    private void Regresar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Regresar1ActionPerformed
+
+        String botones [] = {"Confirmar", "Cancelar"};
+        int aux = JOptionPane.showOptionDialog(null, "Le gustaria Guardar la Informacion", "Titulo", 0, 0, null, botones, null);
+        
+        if ( aux == 0)
+            guardar();
+        
+        
+        // Instancia del Botton Regresar
+        Menu regresar1 = new Menu ();
+        regresar1.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_Regresar1ActionPerformed
+        
+    
+    
+    
+    
     private void verDatos (){
         String guardarLista [][] = new String [Lis.size()][3];
         Persona aux;
@@ -239,6 +326,8 @@ public class AgregarJugador extends javax.swing.JFrame {
     private javax.swing.JButton BtnEliminar;
     private javax.swing.JLabel Fondo;
     private javax.swing.JTable JTable;
+    private javax.swing.JLabel MensajeAgregar;
+    private javax.swing.JButton Regresar1;
     private javax.swing.JButton Regresar_menu1;
     private javax.swing.JTextField TxtApellido;
     private javax.swing.JTextField TxtId;
