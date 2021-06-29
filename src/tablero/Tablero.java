@@ -10,6 +10,7 @@ public class Tablero extends JFrame implements ActionListener{
     JButton movimiento;
     int dadito, player, player2;
     private int c0;
+    FondoPanel ventana = new FondoPanel();
     
     
     
@@ -19,7 +20,8 @@ public class Tablero extends JFrame implements ActionListener{
     public Tablero(){
         
         super("Escaleras y Serpientes");
-        this.setSize(800,600);
+        this.setContentPane(ventana);
+        this.setSize(700,500);
         this.setLocationRelativeTo(null);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.getContentPane();
@@ -29,6 +31,24 @@ public class Tablero extends JFrame implements ActionListener{
         
         
     }
+    
+    class FondoPanel extends JPanel {
+      
+        private Image imagen;
+        
+        @Override
+        public void paint ( Graphics g){
+            imagen = new ImageIcon(getClass().getResource("/imagenes/FONDO MADERA2.png")).getImage();
+            
+            g.drawImage(imagen, 0, 0, getWidth(), getHeight(), this);
+            
+            setOpaque(false);
+            
+            super.paint(g);
+            
+             
+        }
+    } 
     
     
     

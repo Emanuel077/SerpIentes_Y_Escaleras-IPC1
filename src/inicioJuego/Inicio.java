@@ -45,7 +45,7 @@ public class Inicio extends javax.swing.JFrame {
                 jButton1IrMenuActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1IrMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 380, 140, 40));
+        getContentPane().add(jButton1IrMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 520, 140, 40));
 
         jLabel3.setBackground(new java.awt.Color(0, 0, 0));
         jLabel3.setFont(new java.awt.Font("Courier New", 3, 24)); // NOI18N
@@ -55,7 +55,7 @@ public class Inicio extends javax.swing.JFrame {
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 630, 40));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/FONDO MADERA2.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 630, 600));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
