@@ -154,7 +154,7 @@ public class AgregarJugador extends javax.swing.JFrame {
                 Regresar1ActionPerformed(evt);
             }
         });
-        getContentPane().add(Regresar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(357, 532, 140, 40));
+        getContentPane().add(Regresar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(317, 532, 180, 40));
 
         Fondo.setBackground(new java.awt.Color(51, 102, 255));
         Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/FONDO MADERA2.png"))); // NOI18N
