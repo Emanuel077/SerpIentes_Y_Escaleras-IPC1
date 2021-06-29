@@ -8,7 +8,7 @@ public class Tablero extends JFrame implements ActionListener{
     JLabel label[] = new JLabel[64];
     Color casillas, fondo, jugador, casilla2, jugador2;
     JButton movimiento;
-    //JButton regresar;
+    JButton regresar;
     int dadito, player, player2;
     private int c0;
     FondoPanel ventana = new FondoPanel();
@@ -65,7 +65,7 @@ public class Tablero extends JFrame implements ActionListener{
         }
         
         movimiento = new JButton("Tirar Dado");
-        //regresar = new JButton ("<< Regresar");
+        regresar = new JButton ("<< Regresar");
         
         this.setLayout(null);
         
@@ -147,7 +147,7 @@ public class Tablero extends JFrame implements ActionListener{
         label[63].setBounds(360, 360, 50, 50);
 
         movimiento.setBounds(500,200,110,50);
-        //regresar.setBounds(550,250,90,40);
+        regresar.setBounds(500,100,110,50);
         
         
         tab();
@@ -158,8 +158,8 @@ public class Tablero extends JFrame implements ActionListener{
             this.add(label[i]);
         }
 
-       /* this.add(regresar);
-        regresar.addActionListener(this);*/
+        this.add(regresar);
+        regresar.addActionListener(this);
         this.add(movimiento);
         movimiento.addActionListener(this);
     }
@@ -269,6 +269,8 @@ public class Tablero extends JFrame implements ActionListener{
     
    
 
+ 
+    @Override
     public void actionPerformed(ActionEvent ae) {
         
         if (turno == 0) {
@@ -278,19 +280,19 @@ public class Tablero extends JFrame implements ActionListener{
             
             posj1+=espacios;
             int postablero = posj1+1;
-            JOptionPane.showMessageDialog(null, "Has sacado un "+ espacios +" te mueves a la posicion"+postablero);
+            JOptionPane.showMessageDialog(null, " Sacaste un "+ espacios +" te puedes mover a la posicion No. "+postablero);
             
             for (int i = 0; i < 64; i++) {
                 
                 if (posj1 == 4) {
-                    JOptionPane.showMessageDialog(null, "Pisas una escalera, avanza hasta la casilla 10");
+                    JOptionPane.showMessageDialog(null, "EN HORA BUENA!! tocaste una escalera, avanza a la casilla 10");
                     posj1= 9;
                 }
                 
                 //j2
                 
                  if (posj2 == 4) {
-                    JOptionPane.showMessageDialog(null, "Pisas una escalera, avanza hasta la casilla 10");
+                    JOptionPane.showMessageDialog(null, "EN HORA BUENA!! tocaste una escalera, avanza a la casilla 10");
                     posj2= 9;
                 }
                  
@@ -306,7 +308,7 @@ public class Tablero extends JFrame implements ActionListener{
                
             if (posj1 >=63) {
                   
-                JOptionPane.showMessageDialog(null, " Jugador 1 es el Ganador");
+                JOptionPane.showMessageDialog(null, " FELICIDADES!!\nJugador 1 es el Ganador");
                     
             }  
             
@@ -321,17 +323,17 @@ public class Tablero extends JFrame implements ActionListener{
 
                 posj2+=espacios;
                 int postablero = posj2+1;
-                JOptionPane.showMessageDialog(null, "Has sacado un "+ espacios +" te mueves a la posicion"+postablero);
+                JOptionPane.showMessageDialog(null, " Sacaste un "+ espacios +" te puedes mover a la posicion No. "+postablero);
             
                 for (int i = 0; i < 64; i++) {
 
                     if (posj2 == 4) {
-                        JOptionPane.showMessageDialog(null, "Pisas una escalera, avanza hasta la casilla 10");
+                        JOptionPane.showMessageDialog(null, "EN HORA BUENA!! tocaste una escalera, avanza a la casilla 10");
                         posj2= 9;
                     }
                     
                     if (posj1 == 4) {
-                       JOptionPane.showMessageDialog(null, "EN HORA BUENA!! has pisado una escalera, avanza  ");
+                       JOptionPane.showMessageDialog(null,"EN HORA BUENA!! tocaste una escalera, avanza a la casilla 10");
                        posj1= 9; 
                     }
                     
@@ -343,7 +345,8 @@ public class Tablero extends JFrame implements ActionListener{
                     for (int j = 0; j < posj2; j++) {  
                         tab();
                         label[posj1].setBackground(jugador);  
-                        label[posj2].setBackground(jugador2);                    }
+                        label[posj2].setBackground(jugador2);                   
+                    }
 
                 }
                 //Pintar Tablero
@@ -365,12 +368,12 @@ public class Tablero extends JFrame implements ActionListener{
     }
 
     
-   /* public void actionPerformed(ActionEvent reg){
-        if (reg.getSource() == regresar){
+    /*public void actionPerformed(ActionEvent ae){
+        if (ae.getSource() == regresar){
             Menu regresar3 = new Menu();
             this.dispose();
         }
         
     }*/
-    
+   
 }
