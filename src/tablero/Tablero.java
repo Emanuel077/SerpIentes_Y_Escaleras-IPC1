@@ -285,16 +285,31 @@ public class Tablero extends JFrame implements ActionListener{
             for (int i = 0; i < 64; i++) {
                 
                 if (posj1 == 4) {
-                    JOptionPane.showMessageDialog(null, "EN HORA BUENA!! tocaste una escalera, avanza a la casilla 10");
+                    JOptionPane.showMessageDialog(null, "EN HORA BUENA!! tocaste una escalera, avanza a la casilla *10*");
                     posj1= 9;
                 }
                 
-                //j2
+                if (posj1 == 27) {
+                        JOptionPane.showMessageDialog(null, "LO SENTIMOS :( !! Tocaste una serpiente, retrocede a la casilla *21*");
+                        posj1= 20;
+                    }
                 
-                 if (posj2 == 4) {
-                    JOptionPane.showMessageDialog(null, "EN HORA BUENA!! tocaste una escalera, avanza a la casilla 10");
-                    posj2= 9;
+                if (posj1 == 44) {
+                    JOptionPane.showMessageDialog(null, "EN HORA BUENA!! tocaste una escalera, avanza a la casilla *54*");
+                    posj1= 53;
                 }
+                
+                if (posj1 == 52) {
+                        JOptionPane.showMessageDialog(null, "LO SENTIMOS :( !! Tocaste una serpiente, retrocede a la casilla *33*");
+                        posj1= 32;
+                    }
+                
+                if (posj1 == 62) {
+                        JOptionPane.showMessageDialog(null, "LO SENTIMOS :( !! pierdes un turno, retrocede a la casilla *61*");
+                        posj1= 60;
+                    }
+                
+                 
                  
                 for (int j = 0; j < posj1; j++) { 
                     tab();
@@ -327,20 +342,31 @@ public class Tablero extends JFrame implements ActionListener{
             
                 for (int i = 0; i < 64; i++) {
 
-                    if (posj2 == 4) {
-                        JOptionPane.showMessageDialog(null, "EN HORA BUENA!! tocaste una escalera, avanza a la casilla 10");
-                        posj2= 9;
+                    if (posj2 == 7) {
+                            JOptionPane.showMessageDialog(null, "EN HORA BUENA!! tocaste una escalera, avanza a la casilla *15*");
+                            posj2= 14;
+                }
+                
+                    if (posj2 == 30) {
+                            JOptionPane.showMessageDialog(null, "LO SENTIMOS :( !! Tocaste una serpiente, retrocede a la casilla *21*");
+                            posj2= 20;
                     }
+                
+                    if (posj2 == 48) {
+                            JOptionPane.showMessageDialog(null, "EN HORA BUENA!! tocaste una escalera, avanza a la casilla *54*");
+                            posj2= 53;
+                   }
+
+                   if (posj2 == 60) {
+                            JOptionPane.showMessageDialog(null, "LO SENTIMOS :( !! Tocaste una serpiente, retrocede a la casilla *33*");
+                            posj2= 32;
+                       }
+
+                   if (posj2 == 63) {
+                             JOptionPane.showMessageDialog(null, "LO SENTIMOS :( !! pierdes un turno, retrocede a la casilla *62*");
+                             posj2= 61;
+                       }
                     
-                    if (posj1 == 4) {
-                       JOptionPane.showMessageDialog(null,"EN HORA BUENA!! tocaste una escalera, avanza a la casilla 10");
-                       posj1= 9; 
-                    }
-                    
-                    if (posj2 == 4) {
-                        JOptionPane.showMessageDialog(null, "Pisas una escalera, avanza hasta la casilla 10");
-                        posj2= 9;
-                    }
                     
                     for (int j = 0; j < posj2; j++) {  
                         tab();
