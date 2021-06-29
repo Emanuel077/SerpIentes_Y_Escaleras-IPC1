@@ -36,9 +36,9 @@ public class Inicio extends javax.swing.JFrame {
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton1IrMenu.setBackground(new java.awt.Color(0, 0, 0));
+        jButton1IrMenu.setBackground(new java.awt.Color(255, 255, 255));
         jButton1IrMenu.setFont(new java.awt.Font("Courier New", 1, 18)); // NOI18N
-        jButton1IrMenu.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1IrMenu.setForeground(new java.awt.Color(0, 0, 0));
         jButton1IrMenu.setText("Ir a Menu");
         jButton1IrMenu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -52,9 +52,9 @@ public class Inicio extends javax.swing.JFrame {
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("             SNAKES AND LADDERS");
         jLabel3.setOpaque(true);
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 630, 40));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 630, 40));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Fondo 3.jpg"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/FONDO MADERA2.png"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();

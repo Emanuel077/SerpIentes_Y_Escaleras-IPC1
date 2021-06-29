@@ -138,11 +138,12 @@ public class AgregarJugador extends javax.swing.JFrame {
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 350, 510, 150));
 
-        MensajeAgregar.setBackground(new java.awt.Color(255, 255, 255));
-        MensajeAgregar.setFont(new java.awt.Font("Footlight MT Light", 1, 24)); // NOI18N
+        MensajeAgregar.setBackground(new java.awt.Color(0, 0, 0));
+        MensajeAgregar.setFont(new java.awt.Font("Footlight MT Light", 1, 36)); // NOI18N
         MensajeAgregar.setForeground(new java.awt.Color(255, 255, 255));
-        MensajeAgregar.setText("AGREGAR JUGADORES");
-        getContentPane().add(MensajeAgregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 0, 250, 40));
+        MensajeAgregar.setText("        Agregar Jugadores");
+        MensajeAgregar.setOpaque(true);
+        getContentPane().add(MensajeAgregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 530, 40));
 
         Regresar1.setBackground(new java.awt.Color(255, 255, 255));
         Regresar1.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
@@ -156,7 +157,7 @@ public class AgregarJugador extends javax.swing.JFrame {
         getContentPane().add(Regresar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(357, 532, 140, 40));
 
         Fondo.setBackground(new java.awt.Color(51, 102, 255));
-        Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/F3.png"))); // NOI18N
+        Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/FONDO MADERA2.png"))); // NOI18N
         Fondo.setOpaque(true);
         getContentPane().add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 530, 600));
 

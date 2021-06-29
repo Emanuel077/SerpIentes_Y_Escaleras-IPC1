@@ -51,7 +51,7 @@ public class Menu extends javax.swing.JFrame {
                 jButton1AgregarJugadorActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1AgregarJugador, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, -1, -1));
+        getContentPane().add(jButton1AgregarJugador, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 90, -1, -1));
 
         jButton1Jugar.setBackground(new java.awt.Color(255, 255, 255));
         jButton1Jugar.setFont(new java.awt.Font("Courier New", 1, 18)); // NOI18N
@@ -62,7 +62,7 @@ public class Menu extends javax.swing.JFrame {
                 jButton1JugarActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1Jugar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, 200, 40));
+        getContentPane().add(jButton1Jugar, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 180, 200, 40));
 
         jButton2Reportes.setBackground(new java.awt.Color(255, 255, 255));
         jButton2Reportes.setFont(new java.awt.Font("Courier New", 1, 18)); // NOI18N
@@ -73,7 +73,7 @@ public class Menu extends javax.swing.JFrame {
                 jButton2ReportesActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton2Reportes, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, 200, 40));
+        getContentPane().add(jButton2Reportes, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 270, 200, 40));
 
         jLabel1.setBackground(new java.awt.Color(0, 0, 0));
         jLabel1.setFont(new java.awt.Font("Goudy Old Style", 1, 24)); // NOI18N
@@ -91,9 +91,9 @@ public class Menu extends javax.swing.JFrame {
                 btn_SalirActionPerformed(evt);
             }
         });
-        getContentPane().add(btn_Salir, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 360, 190, 40));
+        getContentPane().add(btn_Salir, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 370, 190, 40));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/F3.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/FONDO MADERA2.png"))); // NOI18N
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 480, 460));
 
         pack();
@@ -116,10 +116,7 @@ public class Menu extends javax.swing.JFrame {
     private void jButton1JugarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1JugarActionPerformed
 
         Tablero jugar = new Tablero();
-        
-        
-        
-     
+  
     }//GEN-LAST:event_jButton1JugarActionPerformed
 
     private void btn_SalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_SalirActionPerformed
