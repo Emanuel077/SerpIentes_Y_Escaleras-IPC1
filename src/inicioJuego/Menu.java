@@ -115,7 +115,9 @@ public class Menu extends javax.swing.JFrame {
 
     private void jButton1JugarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1JugarActionPerformed
 
-        //Tablero jugar = new Tablero();
+        Tablero jugar = new Tablero();
+        
+        
         
      
     }//GEN-LAST:event_jButton1JugarActionPerformed
