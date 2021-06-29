@@ -73,14 +73,14 @@ public class Menu extends javax.swing.JFrame {
                 jButton2ReportesActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton2Reportes, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 270, 200, 40));
+        getContentPane().add(jButton2Reportes, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 260, 200, 40));
 
         jLabel1.setBackground(new java.awt.Color(0, 0, 0));
         jLabel1.setFont(new java.awt.Font("Goudy Old Style", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("      BIENVENIDO AL MENU PRINCIPAL");
         jLabel1.setOpaque(true);
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 490, 40));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 480, 40));
 
         btn_Salir.setBackground(new java.awt.Color(255, 255, 255));
         btn_Salir.setFont(new java.awt.Font("Courier New", 1, 18)); // NOI18N
@@ -91,7 +91,7 @@ public class Menu extends javax.swing.JFrame {
                 btn_SalirActionPerformed(evt);
             }
         });
-        getContentPane().add(btn_Salir, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 370, 190, 40));
+        getContentPane().add(btn_Salir, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 350, 200, 40));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/FONDO MADERA2.png"))); // NOI18N
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 480, 460));
@@ -106,8 +106,6 @@ public class Menu extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1AgregarJugadorActionPerformed
 
     private void jButton2ReportesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ReportesActionPerformed
-            
-        btn_AgregarActionPerformed ();
         Reportes reporte = new Reportes();
         reporte.setVisible(true);
         this.dispose();    
@@ -120,7 +118,7 @@ public class Menu extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1JugarActionPerformed
 
     private void btn_SalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_SalirActionPerformed
-        // TODO add your handling code here:
+    System.exit(WIDTH);
     }//GEN-LAST:event_btn_SalirActionPerformed
 
     

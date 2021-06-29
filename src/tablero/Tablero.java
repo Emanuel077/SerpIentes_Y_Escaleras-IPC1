@@ -8,6 +8,7 @@ public class Tablero extends JFrame implements ActionListener{
     JLabel label[] = new JLabel[64];
     Color casillas, fondo, jugador, casilla2, jugador2;
     JButton movimiento;
+    //JButton regresar;
     int dadito, player, player2;
     private int c0;
     FondoPanel ventana = new FondoPanel();
@@ -63,7 +64,8 @@ public class Tablero extends JFrame implements ActionListener{
             label[i] = new JLabel("     *"+(i+1)+"*");
         }
         
-        movimiento = new JButton("Dado");
+        movimiento = new JButton("Tirar Dado");
+        //regresar = new JButton ("<< Regresar");
         
         this.setLayout(null);
         
@@ -144,7 +146,9 @@ public class Tablero extends JFrame implements ActionListener{
         label[62].setBounds(310, 360, 50, 50);
         label[63].setBounds(360, 360, 50, 50);
 
-        movimiento.setBounds(430,300,80,30);
+        movimiento.setBounds(500,200,110,50);
+        //regresar.setBounds(550,250,90,40);
+        
         
         tab();
         label[0].setBackground(jugador);
@@ -154,6 +158,8 @@ public class Tablero extends JFrame implements ActionListener{
             this.add(label[i]);
         }
 
+       /* this.add(regresar);
+        regresar.addActionListener(this);*/
         this.add(movimiento);
         movimiento.addActionListener(this);
     }
@@ -260,10 +266,13 @@ public class Tablero extends JFrame implements ActionListener{
     private int turno = 0;
     
     
+    
+   
+
     public void actionPerformed(ActionEvent ae) {
         
         if (turno == 0) {
-            JOptionPane.showMessageDialog(null, "Turno j1");
+            JOptionPane.showMessageDialog(null, "Turno Jugador 1\nPulsa Ok para detener");
             
             int espacios  = (int)(((Math.random())*60)/10)+1;
             
@@ -297,7 +306,7 @@ public class Tablero extends JFrame implements ActionListener{
                
             if (posj1 >=63) {
                   
-                JOptionPane.showMessageDialog(null, "J1 ha ganado");
+                JOptionPane.showMessageDialog(null, " Jugador 1 es el Ganador");
                     
             }  
             
@@ -306,7 +315,7 @@ public class Tablero extends JFrame implements ActionListener{
             
             
         }else if (turno == 1) {
-                JOptionPane.showMessageDialog(null, "Turno j2");
+                JOptionPane.showMessageDialog(null, "Turno Jugador 2\nPulsa Ok para detener");
             
                 int espacios  = (int)(((Math.random())*60)/10)+1;
 
@@ -322,8 +331,13 @@ public class Tablero extends JFrame implements ActionListener{
                     }
                     
                     if (posj1 == 4) {
-                       JOptionPane.showMessageDialog(null, "Pisas una escalera, avanza hasta la casilla 10 ");
+                       JOptionPane.showMessageDialog(null, "EN HORA BUENA!! has pisado una escalera, avanza  ");
                        posj1= 9; 
+                    }
+                    
+                    if (posj2 == 4) {
+                        JOptionPane.showMessageDialog(null, "Pisas una escalera, avanza hasta la casilla 10");
+                        posj2= 9;
                     }
                     
                     for (int j = 0; j < posj2; j++) {  
@@ -337,7 +351,7 @@ public class Tablero extends JFrame implements ActionListener{
 
                 if (posj2 >=63) {
 
-                    JOptionPane.showMessageDialog(null, "J2 ha ganado");
+                    JOptionPane.showMessageDialog(null, " Jugador 2 es el Ganador ");
 
                 }
                 
@@ -350,5 +364,13 @@ public class Tablero extends JFrame implements ActionListener{
       
     }
 
+    
+   /* public void actionPerformed(ActionEvent reg){
+        if (reg.getSource() == regresar){
+            Menu regresar3 = new Menu();
+            this.dispose();
+        }
+        
+    }*/
     
 }

@@ -148,7 +148,7 @@ public class AgregarJugador extends javax.swing.JFrame {
         Regresar1.setBackground(new java.awt.Color(255, 255, 255));
         Regresar1.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         Regresar1.setForeground(new java.awt.Color(0, 0, 0));
-        Regresar1.setText("Regresar");
+        Regresar1.setText("<< Regresar");
         Regresar1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Regresar1ActionPerformed(evt);
